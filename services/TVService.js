@@ -26,7 +26,7 @@ class TVService {
 
         return new Promise((resolve, reject) => {
             this.connect().then(() => {
-                lgtv.power_off(function(err, response) {
+                lgtv.turn_off(function(err, response) {
                     if (err) {
                         return reject(err)
                     }
