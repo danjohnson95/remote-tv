@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "docker build -t danj/remote-tv .",
+    "docker": "docker run -p 9999:80 danj/remote-tv",
     "start": "node index.js"
   },
   "author": "Dan Johnson <dan@danj.eu>",
