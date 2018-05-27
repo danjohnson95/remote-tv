@@ -21,4 +21,4 @@ router.get('/apps/netflix', AppController.handleOpenNetflix)
 router.get('*', ErrorController.handle)
 
 app.use(router)
-app.listen(1101, '0.0.0.0')
+app.listen(80, '0.0.0.0')
