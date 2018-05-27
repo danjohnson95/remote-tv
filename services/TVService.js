@@ -1,8 +1,10 @@
 const lgtv = require('lgtv')
+const wol = require('wakeonlan')
 
 class TVService {
     constructor (ipAddress) {
         this.ipAddress = ipAddress
+        this.macAddress = '04:4E:AF:46:A6:E8'
     }
 
     connect () {
@@ -19,7 +21,7 @@ class TVService {
 
     togglePower (state) {
         if (state) {
-            // WOL
+            return wol(this.macAddress)
         }
 
         return new Promise((resolve, reject) => {

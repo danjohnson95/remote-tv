@@ -6,12 +6,18 @@ class PowerController extends RequestHandler {
         const tv = new TVService('192.168.0.23')
 
         tv.togglePower(false)
-
-        res.send();
+            .then((response) => {
+                res.send(response);
+            })
     }
 
     static handleOn (req, res) {
+        const tv = new TVService('192.168.0.23')
 
+        tv.togglePower(true)
+            .then((response) => {
+                res.send(response)
+            })
     }
 
     static handleError (req, res) {
